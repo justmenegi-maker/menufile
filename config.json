@@ -1,0 +1,938 @@
+{
+ "name": "NazarQ",
+ "tagline": "THE DHABA-CAFE",
+ "footer": "",
+ "currency": "Rs.",
+ "color": "#f10b0b",
+ "pagecolor": "#f5eaea",
+ "logo": "",
+ "bg": "https://res.cloudinary.com/ngg0a8rt/image/upload/v1791886133/twtvzf9ubrmjkvp0a4kp.jpg",
+ "decor": [],
+ "categories": [
+  {
+   "title": "ALL DAY BREAKFAST",
+   "icon": "🍳",
+   "sections": [
+    {
+     "name": "ALL DAY BREAKFAST",
+     "combo": "",
+     "items": [
+      {
+       "name": "Vegetable Poha",
+       "price": "220",
+       "veg": "v"
+      },
+      {
+       "name": "Poori Bhaji",
+       "price": "250",
+       "veg": "v"
+      },
+      {
+       "name": "Bombay Masala Sandwich",
+       "price": "170",
+       "veg": "v"
+      },
+      {
+       "name": "Anda Bhurji with Pao",
+       "price": "250",
+       "veg": "n"
+      },
+      {
+       "name": "Desi Shakshuka",
+       "price": "240",
+       "veg": "n"
+      },
+      {
+       "name": "Bread Omelette",
+       "price": "160",
+       "veg": "n"
+      },
+      {
+       "name": "Pancake",
+       "price": "240",
+       "veg": "v"
+      },
+      {
+       "name": "Chilli Cheese Toast",
+       "price": "190",
+       "veg": "v"
+      },
+      {
+       "name": "Butter Toast",
+       "price": "80",
+       "veg": "v"
+      },
+      {
+       "name": "Maska Pao",
+       "price": "130",
+       "veg": "v"
+      },
+      {
+       "name": "Malai Jam Toast",
+       "price": "170",
+       "veg": "v"
+      },
+      {
+       "name": "Choice of Parathas (Aloo / Paneer / Gobhi / Egg)",
+       "price": "90",
+       "veg": "b"
+      },
+      {
+       "name": "Choice of Eggs",
+       "price": "130",
+       "veg": "n"
+      },
+      {
+       "name": "Veg Grilled Sandwich",
+       "price": "150",
+       "veg": "v"
+      },
+      {
+       "name": "Chicken Grilled Sandwich",
+       "price": "190",
+       "veg": "n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "SOUPS",
+   "icon": "🥣",
+   "sections": [
+    {
+     "name": "SOUPS",
+     "combo": "",
+     "items": [
+      {
+       "name": "Tomato Soup",
+       "price": "140",
+       "veg": "v"
+      },
+      {
+       "name": "Manchow Soup (Veg)",
+       "price": "120",
+       "veg": "v"
+      },
+      {
+       "name": "Manchow Soup (Chicken)",
+       "price": "150",
+       "veg": "n"
+      },
+      {
+       "name": "Sweet Corn Soup (Veg)",
+       "price": "120",
+       "veg": "v"
+      },
+      {
+       "name": "Sweet Corn Soup (Chicken)",
+       "price": "150",
+       "veg": "n"
+      },
+      {
+       "name": "Thukpa (Veg)",
+       "price": "170",
+       "veg": "v"
+      },
+      {
+       "name": "Thukpa (Chicken)",
+       "price": "250",
+       "veg": "n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "SMALL PLATES",
+   "icon": "🍟",
+   "sections": [
+    {
+     "name": "SMALL PLATES",
+     "combo": "",
+     "items": [
+      {
+       "name": "Crispy Corn Bhel",
+       "price": "250",
+       "veg": "v"
+      },
+      {
+       "name": "Mix Pakoda",
+       "price": "220",
+       "veg": "v"
+      },
+      {
+       "name": "Masala Pav Bhaji",
+       "price": "250",
+       "veg": "v"
+      },
+      {
+       "name": "Matthi Achar",
+       "price": "100",
+       "veg": "v"
+      },
+      {
+       "name": "Choice of Maggie (Plain)",
+       "price": "80",
+       "veg": "v"
+      },
+      {
+       "name": "Choice of Maggie (Veg)",
+       "price": "120",
+       "veg": "v"
+      },
+      {
+       "name": "Pizza Pockets",
+       "price": "350",
+       "veg": "v"
+      },
+      {
+       "name": "French Fries (Salted)",
+       "price": "190",
+       "veg": "v"
+      },
+      {
+       "name": "French Fries (Peri - Peri)",
+       "price": "230",
+       "veg": "v"
+      },
+      {
+       "name": "Paneer Fingers",
+       "price": "280",
+       "veg": "v"
+      },
+      {
+       "name": "Desi Honey Chilli Potato",
+       "price": "250",
+       "veg": "v"
+      },
+      {
+       "name": "Onion Rings",
+       "price": "250",
+       "veg": "v"
+      },
+      {
+       "name": "Paneer Tikka Flatbread",
+       "price": "360",
+       "veg": "v"
+      },
+      {
+       "name": "Peanut Masala",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Fried Chicken",
+       "price": "410",
+       "veg": "n"
+      },
+      {
+       "name": "Achari Fish Fry",
+       "price": "450",
+       "veg": "n"
+      },
+      {
+       "name": "Chicken Tikka Flatbread",
+       "price": "390",
+       "veg": "n"
+      },
+      {
+       "name": "Paneer/Chicken Cheese Bread Pakoda",
+       "price": "320",
+       "veg": "b"
+      },
+      {
+       "name": "Lemon Chicken",
+       "price": "440",
+       "veg": "n"
+      },
+      {
+       "name": "Nazara Special Cheese Egg Omelette",
+       "price": "280",
+       "veg": "n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "TANDOORI APPETIZERS – VEG",
+   "icon": "🥗",
+   "sections": [
+    {
+     "name": "TANDOORI APPETIZERS – VEG",
+     "combo": "",
+     "items": [
+      {
+       "name": "Tandoori Malai Chaap",
+       "price": "250",
+       "veg": "v"
+      },
+      {
+       "name": "Hara Bhara Kebab with Chutney",
+       "price": "320",
+       "veg": "v"
+      },
+      {
+       "name": "Lasooni Paneer Tikka",
+       "price": "290",
+       "veg": "v"
+      },
+      {
+       "name": "Tandoori Masala Chaap",
+       "price": "250",
+       "veg": "v"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "TANDOORI APPETIZERS NON-VEGETARIAN",
+   "icon": "🍗",
+   "sections": [
+    {
+     "name": "TANDOORI APPETIZERS NON-VEGETARIAN",
+     "combo": "",
+     "items": [
+      {
+       "name": "Lahsooni Murgh Tikka",
+       "price": "480",
+       "veg": "n"
+      },
+      {
+       "name": "Murgh Malai Tikka",
+       "price": "440",
+       "veg": "n"
+      },
+      {
+       "name": "Tandoori Murgh with Salad and Chutney",
+       "price": "410",
+       "veg": "n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "VEGETARIAN MAINS",
+   "icon": "🍛",
+   "sections": [
+    {
+     "name": "VEGETARIAN MAINS",
+     "combo": "Shahi",
+     "items": [
+      {
+       "name": "Choice of Paneer (Kadai",
+       "price": "Do Pyaza",
+       "veg": "v"
+      },
+      {
+       "name": "Dhaniya Jeera Aloo",
+       "price": "260",
+       "veg": "v"
+      },
+      {
+       "name": "Bharva Bhindi Masala",
+       "price": "290",
+       "veg": "v"
+      },
+      {
+       "name": "Dhabhe Wali Dal",
+       "price": "280",
+       "veg": "v"
+      },
+      {
+       "name": "Dal Makhni",
+       "price": "290",
+       "veg": "v"
+      },
+      {
+       "name": "Rajma Masala – Hill Style",
+       "price": "340",
+       "veg": "v"
+      },
+      {
+       "name": "Malai Kofta",
+       "price": "350",
+       "veg": "v"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "NON-VEGETARIAN MAINS",
+   "icon": "🍗",
+   "sections": [
+    {
+     "name": "NON-VEGETARIAN MAINS",
+     "combo": "",
+     "items": [
+      {
+       "name": "Delhi Style Butter Chicken (Bone)",
+       "price": "410",
+       "veg": "n"
+      },
+      {
+       "name": "Delhi Style Butter Chicken (Boneless)",
+       "price": "410",
+       "veg": "n"
+      },
+      {
+       "name": "Chicken Rarha",
+       "price": "410",
+       "veg": "n"
+      },
+      {
+       "name": "Safed Butter Chicken",
+       "price": "460",
+       "veg": "n"
+      },
+      {
+       "name": "Murgh Do Pyaza",
+       "price": "380",
+       "veg": "n"
+      },
+      {
+       "name": "Desi Anda Curry",
+       "price": "320",
+       "veg": "n"
+      },
+      {
+       "name": "Desi Ghee Mutton",
+       "price": "630",
+       "veg": "n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "PAHADI MENU",
+   "icon": "🏔️",
+   "sections": [
+    {
+     "name": "PAHADI MENU",
+     "combo": "",
+     "items": [
+      {
+       "name": "Paneer Mirch Masala",
+       "price": "310",
+       "veg": "v"
+      },
+      {
+       "name": "Pahadon Wali Paneer Bhurji",
+       "price": "350",
+       "veg": "v"
+      },
+      {
+       "name": "Himachal Boondi Kadhi",
+       "price": "280",
+       "veg": "v"
+      },
+      {
+       "name": "Aloo Palda",
+       "price": "280",
+       "veg": "v"
+      },
+      {
+       "name": "Pahadi Madra",
+       "price": "320",
+       "veg": "v"
+      },
+      {
+       "name": "Babru (2 Pieces)",
+       "price": "90",
+       "veg": "v"
+      },
+      {
+       "name": "Pahadi Bhuna Chicken",
+       "price": "420",
+       "veg": "n"
+      },
+      {
+       "name": "Pahadi Bhuna Mutton",
+       "price": "600",
+       "veg": "n"
+      },
+      {
+       "name": "Himachali Hara Murgh Tikka",
+       "price": "380",
+       "veg": "n"
+      },
+      {
+       "name": "Kukde Ki Shikar (Pahadi Chicken Curry)",
+       "price": "450",
+       "veg": "n"
+      },
+      {
+       "name": "Pahadi Mutton Curry",
+       "price": "620",
+       "veg": "n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "BREADS & ROLLS",
+   "icon": "🫓",
+   "sections": [
+    {
+     "name": "BREADS & ROLLS",
+     "combo": "",
+     "items": [
+      {
+       "name": "Double Egg Roll",
+       "price": "190",
+       "veg": "n"
+      },
+      {
+       "name": "Chicken Tikka Roll",
+       "price": "290",
+       "veg": "n"
+      },
+      {
+       "name": "Paneer Kathi Roll",
+       "price": "270",
+       "veg": "v"
+      },
+      {
+       "name": "Stuffed Kulcha (Paneer)",
+       "price": "290",
+       "veg": "v"
+      },
+      {
+       "name": "Stuffed Kulcha (Chicken)",
+       "price": "320",
+       "veg": "n"
+      },
+      {
+       "name": "Bullet Laccha Paratha (Hari Mirch Paratha)",
+       "price": "130",
+       "veg": "v"
+      },
+      {
+       "name": "Chicken Keema Naan with Gravy",
+       "price": "330",
+       "veg": "n"
+      },
+      {
+       "name": "Paneer Naan with Gravy",
+       "price": "300",
+       "veg": "v"
+      },
+      {
+       "name": "Tawa Roti (Plain)",
+       "price": "30",
+       "veg": "v"
+      },
+      {
+       "name": "Tawa Roti (Butter)",
+       "price": "35",
+       "veg": "v"
+      },
+      {
+       "name": "Tandoori Roti (Plain)",
+       "price": "35",
+       "veg": "v"
+      },
+      {
+       "name": "Tandoori Roti (Butter)",
+       "price": "45",
+       "veg": "v"
+      },
+      {
+       "name": "Choice of Naan (Garlic)",
+       "price": "100",
+       "veg": "v"
+      },
+      {
+       "name": "Choice of Naan (Butter)",
+       "price": "100",
+       "veg": "v"
+      },
+      {
+       "name": "Choice of Naan (Plain)",
+       "price": "100",
+       "veg": "v"
+      },
+      {
+       "name": "Tawa Paratha",
+       "price": "60",
+       "veg": "v"
+      },
+      {
+       "name": "Laccha Paratha",
+       "price": "90",
+       "veg": "v"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "RICE & BIRYANI",
+   "icon": "🍚",
+   "sections": [
+    {
+     "name": "RICE & BIRYANI",
+     "combo": "",
+     "items": [
+      {
+       "name": "Steamed Rice",
+       "price": "190",
+       "veg": "v"
+      },
+      {
+       "name": "Ghee Bhaat",
+       "price": "290",
+       "veg": "v"
+      },
+      {
+       "name": "Jeera Rice",
+       "price": "230",
+       "veg": "v"
+      },
+      {
+       "name": "Tawa Vegetable Pulao",
+       "price": "290",
+       "veg": "v"
+      },
+      {
+       "name": "Chicken Yakhni Pulao",
+       "price": "370",
+       "veg": "n"
+      },
+      {
+       "name": "Murgh Biryani",
+       "price": "420",
+       "veg": "n"
+      },
+      {
+       "name": "Paneer Tikka Biryani",
+       "price": "370",
+       "veg": "v"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "COMBO BOXES",
+   "icon": "🍱",
+   "sections": [
+    {
+     "name": "COMBO BOXES (Serves 1 Person)",
+     "combo": "",
+     "items": [
+      {
+       "name": "Chinese Box (Veg)",
+       "price": "350",
+       "veg": "v"
+      },
+      {
+       "name": "Chinese Box (Chicken)",
+       "price": "350",
+       "veg": "n"
+      },
+      {
+       "name": "Himachali Thali",
+       "price": "350",
+       "veg": "v"
+      },
+      {
+       "name": "Paneer Makhani Box",
+       "price": "350",
+       "veg": "v"
+      },
+      {
+       "name": "Butter Chicken Box",
+       "price": "350",
+       "veg": "n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "CHINESE",
+   "icon": "🥡",
+   "sections": [
+    {
+     "name": "CHINESE",
+     "combo": "",
+     "items": [
+      {
+       "name": "Chowmein (Veg)",
+       "price": "240",
+       "veg": "v"
+      },
+      {
+       "name": "Chowmein (Chicken)",
+       "price": "280",
+       "veg": "n"
+      },
+      {
+       "name": "Chilli Garlic Noodles (Veg)",
+       "price": "280",
+       "veg": "v"
+      },
+      {
+       "name": "Chilli Garlic Noodles (Chicken)",
+       "price": "320",
+       "veg": "n"
+      },
+      {
+       "name": "Hakka Noodles (Veg)",
+       "price": "290",
+       "veg": "v"
+      },
+      {
+       "name": "Hakka Noodles (Chicken)",
+       "price": "350",
+       "veg": "n"
+      },
+      {
+       "name": "Fried Rice (Veg)",
+       "price": "250",
+       "veg": "v"
+      },
+      {
+       "name": "Fried Rice (Chicken)",
+       "price": "300",
+       "veg": "n"
+      },
+      {
+       "name": "Veg Manchurian",
+       "price": "290",
+       "veg": "v"
+      },
+      {
+       "name": "Veg Momos (Steamed)",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Veg Momos (Pan Fried)",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Veg Momos (Kurkure)",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Chicken Momos (Steamed)",
+       "price": "230",
+       "veg": "n"
+      },
+      {
+       "name": "Chicken Momos (Pan Fried)",
+       "price": "230",
+       "veg": "n"
+      },
+      {
+       "name": "Chicken Momos (Kurkure)",
+       "price": "230",
+       "veg": "n"
+      },
+      {
+       "name": "Veg Spring Roll",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Chilli Chicken",
+       "price": "390",
+       "veg": "n"
+      },
+      {
+       "name": "Chilli Paneer",
+       "price": "350",
+       "veg": "v"
+      },
+      {
+       "name": "Chilli Mushroom",
+       "price": "350",
+       "veg": "v"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "SIDES",
+   "icon": "🥗",
+   "sections": [
+    {
+     "name": "SIDES",
+     "combo": "",
+     "items": [
+      {
+       "name": "Boondi Raita",
+       "price": "170",
+       "veg": "v"
+      },
+      {
+       "name": "Cucumber Raita",
+       "price": "170",
+       "veg": "v"
+      },
+      {
+       "name": "Plain Curd",
+       "price": "90",
+       "veg": "v"
+      },
+      {
+       "name": "Green Salad",
+       "price": "130",
+       "veg": "v"
+      },
+      {
+       "name": "Chicken Salad",
+       "price": "220",
+       "veg": "n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "DESSERTS & SWEETS",
+   "icon": "🍨",
+   "sections": [
+    {
+     "name": "DESSERTS & SWEETS",
+     "combo": "",
+     "items": [
+      {
+       "name": "Choice of Ice Cream Scoop",
+       "price": "90",
+       "veg": "v"
+      },
+      {
+       "name": "Mittha",
+       "price": "290",
+       "veg": "v"
+      },
+      {
+       "name": "Shahi Tukda",
+       "price": "280",
+       "veg": "v"
+      },
+      {
+       "name": "Gud Aur Ghee Paratha",
+       "price": "160",
+       "veg": "v"
+      },
+      {
+       "name": "Waffle (Chocolate Sauce / Honey)",
+       "price": "280",
+       "veg": "v"
+      },
+      {
+       "name": "Gulab Jamun",
+       "price": "90",
+       "veg": "v"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "DRINKS & REFRESHMENTS",
+   "icon": "🥤",
+   "sections": [
+    {
+     "name": "DRINKS & REFRESHMENTS",
+     "combo": "",
+     "items": [
+      {
+       "name": "Coke / Limca",
+       "price": "70",
+       "veg": "v"
+      },
+      {
+       "name": "Choice of Shake (Chocolate)",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Choice of Shake (Strawberry)",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Choice of Shake (Vanilla)",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Choice of Shake (Oreo)",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Aam Ki Smoothie",
+       "price": "250",
+       "veg": "v"
+      },
+      {
+       "name": "Buransh Cooler",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Hot Coffee",
+       "price": "120",
+       "veg": "v"
+      },
+      {
+       "name": "Pahadi Nimbu Shikanji",
+       "price": "140",
+       "veg": "v"
+      },
+      {
+       "name": "Ginger Lemon Honey Tea",
+       "price": "140",
+       "veg": "v"
+      },
+      {
+       "name": "Cold Coffee",
+       "price": "190",
+       "veg": "v"
+      },
+      {
+       "name": "Lassi (Sweet or Salted)",
+       "price": "120",
+       "veg": "v"
+      },
+      {
+       "name": "Pahadi Masala Chai",
+       "price": "40",
+       "veg": "v"
+      },
+      {
+       "name": "Peach / Lemon Ice Tea",
+       "price": "190",
+       "veg": "v"
+      },
+      {
+       "name": "Hot Chocolate",
+       "price": "180",
+       "veg": "v"
+      },
+      {
+       "name": "Kulhad Chai",
+       "price": "70",
+       "veg": "v"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
