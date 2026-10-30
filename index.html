@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5eaea"><title>Digital Menu</title>
+<script>try{if(sessionStorage.getItem('sp'))document.documentElement.classList.add('nosplash');else sessionStorage.setItem('sp','1')}catch(e){}</script>
+<style>
+:root{--red:#f10b0b;--rd:color-mix(in srgb,var(--red),#000 22%);--page:#f5eaea;--ink:#171717;--green:#27834e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;position:relative;overflow-x:hidden;background:var(--page) center/cover fixed;color:var(--ink);font-family:Arial,Helvetica,"Noto Sans Devanagari",sans-serif}
+button,input{font:inherit}
+.page{position:relative;z-index:1;max-width:1080px;margin:auto;padding:22px 22px 42px}
+.decor{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.decor img{position:absolute;height:auto;opacity:.9;filter:drop-shadow(0 14px 22px rgba(90,30,20,.22))}
+.hero{min-height:205px;background:var(--red);border-radius:42px;padding:24px 26px;color:#fff;display:flex;flex-direction:column;justify-content:space-between}
+.logo,.s-logo{background:#fff;color:var(--rd);display:grid;place-items:center;font-weight:900;overflow:hidden}
+.logo{width:72px;height:72px;border-radius:23px;font-size:25px}
+.logo img,.s-logo img{width:100%;height:100%;object-fit:contain}
+.restaurant-name{font-size:18px;font-weight:700;margin:25px 0 8px;opacity:.85}
+.greeting{font-size:clamp(31px,6vw,46px);line-height:1.1;font-weight:900;letter-spacing:-1.5px;margin:0}
+.tools{display:flex;gap:12px;align-items:center;margin:27px 0 20px}
+.search-wrap{flex:1;min-width:0;height:70px;border:1px solid #e2dddd;background:#fff;border-radius:40px;display:flex;align-items:center;padding:0 21px;gap:14px}
+.search-icon{font-size:23px;color:#777}
+#search{width:100%;border:0;outline:0;background:transparent;font-size:17px;min-width:0}
+.veg-switch{position:relative;flex:0 0 auto;display:flex;align-items:center;gap:10px;height:70px;padding:0 18px;background:#fff;border:1px solid #e2dddd;border-radius:40px;cursor:pointer;user-select:none;white-space:nowrap;font-weight:800;color:#555}
+.veg-switch input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.vdot{width:16px;height:16px;border:2px solid var(--green);border-radius:3px;display:grid;place-items:center}
+.vdot:after{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+.track{position:relative;width:44px;height:26px;border-radius:13px;background:#d6d1d1;transition:background .2s}
+.thumb{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0003;transition:transform .2s}
+.veg-switch input:checked~.track{background:var(--green)}
+.veg-switch input:checked~.track .thumb{transform:translateX(18px)}
+.veg-switch:has(input:checked){background:#e9f5ed;border-color:#bfe0cb;color:#176d3b}
+.category-nav{display:flex;gap:12px;overflow-x:auto;padding:5px 0 18px;scrollbar-width:none}
+.category-nav::-webkit-scrollbar{display:none}
+.category-nav button{flex:0 0 auto;min-width:83px;border:0;background:transparent;color:#555;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:12px;font-weight:700;cursor:pointer}
+.circle{width:76px;height:76px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:27px;border:3px solid transparent;box-shadow:0 2px 8px #00000008;overflow:hidden}
+.circle img{width:100%;height:100%;object-fit:cover}
+.section-title{font-size:27px;letter-spacing:-.8px;font-weight:900;margin:17px 0 15px}
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;align-items:start}
+.category-block{scroll-margin-top:15px}
+.category-heading{display:flex;align-items:center;gap:10px;margin:12px 2px}
+.category-heading h2{font-size:22px;margin:0;font-weight:900;letter-spacing:-.5px}
+.category-heading:after{content:"";height:1px;background:#dfd4d4;flex:1}
+.menu-card{background:rgba(255,255,255,.84);border-radius:23px;padding:16px 18px;margin-bottom:13px;box-shadow:0 3px 13px #00000005}
+.menu-card h3{font-size:15px;color:var(--rd);margin:0 0 9px;font-weight:900;letter-spacing:.5px}
+.dish{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding:7px 0;border-bottom:1px solid #f0eded;font-size:14px;line-height:1.4}
+.dish:last-child{border-bottom:0}
+.dish-name{font-weight:600}.price{font-weight:800;white-space:nowrap}
+.combo-price{margin-top:12px;background:var(--ink);color:#fff;border-radius:14px;padding:11px 14px;text-align:center;font-weight:900;font-size:15px}
+.no-results{grid-column:1/-1;background:rgba(255,255,255,.9);border-radius:22px;padding:35px;text-align:center;color:#777}
+.footer{text-align:center;color:#777;font-size:12px;padding:30px 0 0;line-height:1.6}
+.footer strong{color:var(--red);letter-spacing:2px}
+@media(max-width:700px){
+.page{padding:16px 16px 32px}.hero{min-height:228px;border-radius:38px;padding:19px 20px 24px}
+.greeting{font-size:39px}.tools{gap:9px;margin:26px 0 17px}.search-wrap,.veg-switch{height:72px}
+#search{font-size:15px}.veg-switch{padding:0 13px;gap:8px;font-size:13px}
+.category-nav{gap:8px;margin-right:-16px}.circle{width:72px;height:72px}
+.menu-grid{grid-template-columns:1fr;gap:0}}
+@media(max-width:390px){.vdot{display:none}.greeting{font-size:34px}}
+#splash{position:fixed;inset:0;z-index:100;background:var(--red);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;animation:out .65s cubic-bezier(.7,0,.25,1) 1.9s forwards}
+.s-logo{width:96px;height:96px;border-radius:30px;font-size:34px;animation:pop .7s cubic-bezier(.34,1.56,.64,1) .1s both}
+.s-name{font-size:30px;font-weight:900;animation:rise .55s ease-out .55s both}
+.s-tag{font-size:14px;font-weight:600;opacity:.85;animation:rise .55s ease-out .8s both}
+.welcome,.tools{animation:rise .6s ease-out 2.1s both}
+@keyframes pop{from{transform:scale(0) rotate(-25deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes rise{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+@keyframes out{to{transform:translateY(-105%);border-radius:0 0 50% 50%/0 0 8% 8%;visibility:hidden}}
+.nosplash #splash{display:none}.nosplash .welcome,.nosplash .tools{animation:none}
+@media(prefers-reduced-motion:reduce){#splash{display:none}.welcome,.tools{animation:none}}
+</style></head>
+<body>
+<div id="splash" aria-hidden="true"><div class="s-logo" id="sLogo"></div><div class="s-name" id="sName"></div><div class="s-tag" id="sTag"></div></div>
+<div class="decor" id="decor" aria-hidden="true"></div>
+<div class="page">
+<header class="hero"><div class="logo" id="logo"></div>
+<div class="welcome"><p class="restaurant-name" id="restName"></p><h1 class="greeting" id="greeting"></h1></div></header>
+<div class="tools">
+<label class="search-wrap"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Search your favourite dish..." autocomplete="off"></label>
+<label class="veg-switch"><input type="checkbox" id="vegOnly" role="switch"><span class="vdot"></span><span>Veg only</span><span class="track"><span class="thumb"></span></span></label>
+</div>
+<nav class="category-nav" id="nav"></nav>
+<h2 class="section-title">Our Menu</h2>
+<main class="menu-grid" id="menu"></main>
+<footer class="footer"><strong id="footName"></strong><br><span id="foot1"></span><br><br><span id="foot2"></span></footer>
+</div>
+<script>
+const $=id=>document.getElementById(id),EM=['☕','🍳','🥪','🥟','🍟','🍛','⭐','🍱'],PV=location.hash=='#preview';
+let C,veg=false;
+// Cloudinary: auto format/quality (+ size) when the link has a version segment
+const cl=(u,t)=>u&&/\/upload\/v\d+\//.test(u)?u.replace('/upload/','/upload/f_auto,q_auto'+(t?','+t:'')+'/'):u;
+function el(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+function greet(){const h=new Date().getHours();$('greeting').textContent=['Good Morning','Good Afternoon','Good Evening'][h<12?0:h<17?1:2]}
+function init(c){
+ C=c;C.currency=c.currency||'Rs.';const s=document.documentElement.style;
+ s.setProperty('--red',c.color||'#f10b0b');s.setProperty('--page',c.pagecolor||'#f5eaea');
+ document.querySelector('meta[name=theme-color]').content=c.pagecolor||'#f5eaea';
+ document.title=c.name+' | Digital Menu';
+ document.body.style.backgroundImage=c.bg?'url("'+cl(c.bg,'w_1400').replace(/["\\\n]/g,'')+'")':'';
+ const ini=c.name.split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
+ ['logo','sLogo'].forEach(id=>{const e=$(id);e.textContent='';if(c.logo){const i=new Image();i.src=cl(c.logo,'w_200');i.alt=c.name;e.append(i)}else e.textContent=ini});
+ $('sName').textContent=$('restName').textContent=c.name;$('footName').textContent=c.name.toUpperCase();
+ $('sTag').textContent=$('foot1').textContent=c.tagline||'';$('foot2').textContent=c.footer||'';
+ greet();render();
+}
+function render(){
+ const q=$('search').value.trim().toLowerCase(),M=$('menu'),N=$('nav');M.innerHTML=N.innerHTML='';let any=0;
+ C.categories.forEach((cat,i)=>{
+  const secs=cat.sections.map(s=>({...s,items:s.items.filter(it=>(!veg||it.veg=='v'||it.veg=='b')&&(it.name+' '+s.name+' '+cat.title).toLowerCase().includes(q))})).filter(s=>s.items.length);
+  if(!secs.length)return;any=1;
+  const b=el('button');b.type='button';const ic=el('span','circle');
+  if(/^https?:/.test(cat.icon)){const im=new Image();im.src=cl(cat.icon,'w_120');im.alt='';ic.append(im)}else ic.textContent=cat.icon||EM[i%EM.length];
+  b.append(ic,el('span','',cat.title));b.onclick=()=>$('c'+i).scrollIntoView({behavior:'smooth'});N.append(b);
+  const blk=el('section','category-block');blk.id='c'+i;const h=el('div','category-heading');h.append(el('h2','',cat.title));blk.append(h);
+  secs.forEach(s=>{const card=el('div','menu-card');if(s.name!=cat.title)card.append(el('h3','',s.name));
+   s.items.forEach(it=>{const r=el('div','dish');r.append(el('span','dish-name',it.name),el('span','price',it.price?C.currency+' '+it.price:''));card.append(r)});
+   if(s.combo)card.append(el('div','combo-price','Only '+C.currency+' '+s.combo));blk.append(card)});
+  M.append(blk)});
+ if(!any)M.append(el('div','no-results','No dishes found. Try another search or turn off Veg only.'));
+ decorSoon();
+}
+// floating food photos from the @decor image list
+const POS=[['l',-12,1],['r',9,.95],['l',7,.85],['r',-14,1.05],['r',8,1],['l',-8,.95]];
+function layoutDecor(){
+ const d=$('decor'),L=C&&C.decor||[];d.innerHTML='';if(!L.length)return;
+ const H=document.body.scrollHeight,W=document.documentElement.clientWidth,m=W<700,base=m?Math.min(W*.95,380):Math.min(W*.34,520);
+ for(let i=0,y=m?330:300;y<H-120;i++,y+=m?600:680){
+  const [side,rot,f]=POS[i%POS.length],img=new Image(),w=base*f;
+  img.src=cl(L[i%L.length],'w_700');img.alt='';img.draggable=false;
+  img.style.cssText='width:'+w+'px;top:'+y+'px;'+(side=='l'?'left':'right')+':'+(m?-w*.22:-w*.12)+'px;transform:rotate('+rot+'deg)';d.append(img)}
+}
+let dt;function decorSoon(){clearTimeout(dt);dt=setTimeout(layoutDecor,80)}
+addEventListener('resize',decorSoon);addEventListener('load',decorSoon);
+$('search').addEventListener('input',render);
+$('vegOnly').addEventListener('change',e=>{veg=e.target.checked;render()});
+const sp=$('splash');if(PV){sp.style.display='none';document.documentElement.classList.add('nosplash')}else{sp.onclick=()=>sp.remove();sp.addEventListener('animationend',e=>{if(e.target==sp)sp.remove()})}
+if(PV)addEventListener('message',e=>{if(e.data&&e.data.cfg)init(e.data.cfg)});
+else fetch('config.json?'+Date.now()).then(r=>{if(!r.ok)throw 0;return r.json()}).then(init).catch(()=>$('menu').append(el('div','no-results','config.json not found. Create it with /setup.')));
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
